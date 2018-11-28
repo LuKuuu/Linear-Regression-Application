@@ -232,8 +232,7 @@ func main() {
 	http.HandleFunc("/result", ur.Result)
 
 
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	err := http.ListenAndServe(":2000", nil) //创建服务器
+	err := http.ListenAndServe(":800", nil) //创建服务器
 	if err != nil {
 		fmt.Printf("%v", err)
 		time.Sleep(time.Second*10)
